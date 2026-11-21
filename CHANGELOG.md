@@ -6,6 +6,100 @@ This project adheres to [Keep a Changelog](https://keepachangelog.com/) and [Sem
 
 ---
 
+## [v1.16.6] - 2026-11-21
+
+### Fixed
+
+- serve default locale from root by @nyaomaru in [#453](https://github.com/necoz-oss/is-kit/pull/453)
+
+### Docs
+
+- 1.16.5 by @github-actions[bot] in [#428](https://github.com/necoz-oss/is-kit/pull/428)
+- welcome contributors and clarify contribution workflow by @nyaomaru in [#448](https://github.com/necoz-oss/is-kit/pull/448)
+- clarify safeJsonParse error boundaries (#437) by @agenticsymphony-tech in [#446](https://github.com/necoz-oss/is-kit/pull/446)
+- add contributor checklist to PR template (#444) by @daocuong11 in [#447](https://github.com/necoz-oss/is-kit/pull/447)
+- update stale tsup references to tsdown (#439) by @daocuong11 in [#456](https://github.com/necoz-oss/is-kit/pull/456)
+- compare optional, optionalKey and optionalKey(optional) in struct docs by @atokim4 in [#457](https://github.com/necoz-oss/is-kit/pull/457)
+- document oneOfValues equality, input forms and snapshot behavior by @deba2k5 in [#459](https://github.com/necoz-oss/is-kit/pull/459)
+- clarify tupleOf length, sparse tuple, and evaluation behavior by @Lil-Clanky in [#460](https://github.com/necoz-oss/is-kit/pull/460)
+- clarify discriminated-union narrowing semantics by @ArnabOPP in [#461](https://github.com/necoz-oss/is-kit/pull/461)
+
+### Test
+
+- verify or evaluation order and short-circuit behavior by @tylrcc in [#423](https://github.com/necoz-oss/is-kit/pull/423)
+- assert safeJsonParse guard errors propagate unchanged by @tridev-tej in [#431](https://github.com/necoz-oss/is-kit/pull/431)
+- cover object reference identity by @chirag-gupta7 in [#445](https://github.com/necoz-oss/is-kit/pull/445)
+- verify guardIn forwarding behavior by @chirag-gupta7 in [#449](https://github.com/necoz-oss/is-kit/pull/449)
+- verify hasKey and hasKeys do not read property values by @wathsalaggg in [#454](https://github.com/necoz-oss/is-kit/pull/454)
+- strengthen not forwarding and error behavior (#435) by @daocuong11 in [#455](https://github.com/necoz-oss/is-kit/pull/455)
+
+### Chore
+
+- Release: 1.16.6 by @github-actions[bot] in [#462](https://github.com/necoz-oss/is-kit/pull/462)
+
+### Welcome, New Contributors! 🎉
+
+- **@tridev-tej** strengthened `safeJsonParse` regression coverage, making sure guard errors propagate unchanged.  
+  https://github.com/necoz-oss/is-kit/pull/431  
+  - Thank you for helping lock down an important error-handling contract! 😸🙌
+
+- **@chirag-gupta7** added coverage for object reference identity in `equals` and came back with another contribution covering `guardIn` forwarding behavior.  
+  https://github.com/necoz-oss/is-kit/pull/445  
+  https://github.com/necoz-oss/is-kit/pull/449  
+  - Two contributions in one release! Thanks for helping make these small runtime contracts more explicit and reliable. 🐈💚
+
+- **@agenticsymphony-tech** improved the `safeJsonParse` documentation by clarifying its error boundaries and what it does — and does not — catch.  
+  https://github.com/necoz-oss/is-kit/pull/446  
+  - Thanks for making the behavior easier for users to understand at runtime boundaries! 🙌
+
+- **@daocuong11** jumped into several parts of the project — improving the PR contribution checklist, strengthening `not` runtime coverage, and updating stale `tsup` documentation to `tsdown`.  
+  https://github.com/necoz-oss/is-kit/pull/447  
+  https://github.com/necoz-oss/is-kit/pull/455  
+  https://github.com/necoz-oss/is-kit/pull/456  
+  - Three contributions in one release! Thank you for helping with both contributor experience and library reliability. 🎉🐈
+
+- **@wathsalaggg** added focused regression tests proving that `hasKey` and `hasKeys` check property presence without reading property values.  
+  https://github.com/necoz-oss/is-kit/pull/454  
+  - Thank you for helping protect this subtle but important runtime behavior! 😸🙌
+
+- **@atokim4** made the difference between `optional`, `optionalKey`, and `optionalKey(optional(...))` much easier to understand, including real API / JSON payload examples.  
+  https://github.com/necoz-oss/is-kit/pull/457  
+  - Thanks for turning a subtle API distinction into documentation that is much easier to use in practice! 🐈💚
+
+- **@deba2k5** documented the runtime contract of `oneOfValues`, including `Object.is` equality, argument and array forms, and snapshot behavior.  
+  https://github.com/necoz-oss/is-kit/pull/459  
+  - Thank you for making these edge cases visible and predictable for users! 🙌
+
+- **@Lil-Clanky** documented `tupleOf` behavior around exact lengths, sparse arrays, evaluation order, and short-circuiting.  
+  https://github.com/necoz-oss/is-kit/pull/460  
+  - Thanks for helping expose the small runtime guarantees that make composable guards easier to trust! 😸🐈
+
+- **@ArnabOPP** expanded the `oneOf` documentation around discriminated-union narrowing, explicit input domains with `not`, and overlapping structural unions.  
+  https://github.com/necoz-oss/is-kit/pull/461  
+  - Thank you for helping make some of the deeper TypeScript narrowing behavior much easier to understand! 🎉🙌
+
+Thank you so much to everyone who contributed to v1.16.6!
+
+Seeing more people jump into is-kit, improve different parts of the project, and help make its behavior clearer and more reliable is really exciting. 😸💚
+
+Welcome to is-kit, and welcome to Necoz!
+
+### New Contributors
+
+* @tridev-tej made their first contribution in https://github.com/necoz-oss/is-kit/pull/431
+* @chirag-gupta7 made their first contribution in https://github.com/necoz-oss/is-kit/pull/445
+* @agenticsymphony-tech made their first contribution in https://github.com/necoz-oss/is-kit/pull/446
+* @daocuong11 made their first contribution in https://github.com/necoz-oss/is-kit/pull/447
+* @wathsalaggg made their first contribution in https://github.com/necoz-oss/is-kit/pull/454
+* @atokim4 made their first contribution in https://github.com/necoz-oss/is-kit/pull/457
+* @deba2k5 made their first contribution in https://github.com/necoz-oss/is-kit/pull/459
+* @Lil-Clanky made their first contribution in https://github.com/necoz-oss/is-kit/pull/460
+* @ArnabOPP made their first contribution in https://github.com/necoz-oss/is-kit/pull/461
+
+**Full Changelog**: https://github.com/necoz-oss/is-kit/compare/v1.16.5...v1.16.6
+
+[v1.16.6]: https://github.com/necoz-oss/is-kit/compare/v1.16.5...v1.16.6
+
 ## [v1.16.5] - 2026-11-13
 
 ### Fixed
@@ -2322,7 +2416,7 @@ if (isGuestOrTrial(input)) {
 - Merge pull request #39 from nyaomaru/chore/update-CHANGELOG (#39)
 - update CHANGELOG (#39)
 
-[Unreleased]: https://github.com/necoz-oss/is-kit/compare/v1.16.5...HEAD
+[Unreleased]: https://github.com/necoz-oss/is-kit/compare/v1.16.6...HEAD
 [v1.0.5]: https://github.com/necoz-oss/is-kit/compare/v1.0.4...v1.0.5
 
 ## [1.0.4] - 2025-10-25
