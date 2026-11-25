@@ -54,9 +54,10 @@ if (isGuestOrTrial(input)) {
   // input.role is narrowed to 'guest' | 'trial'
 }`;
 
-const sampleNarrowKeyToBaseGuard = `import { hasKey, narrowKeyTo } from 'is-kit';
+const sampleNarrowKeyToBaseGuard = `import { hasKeys, narrowKeyTo } from 'is-kit';
 
-const isAdmin = narrowKeyTo(hasKey('name'), 'role')('admin');
+const hasNameAndRole = hasKeys('name', 'role');
+const isAdmin = narrowKeyTo(hasNameAndRole, 'role')('admin');
 
 // The base guard runs first: without an own 'name' key, 'role' is never read.
 isAdmin({ role: 'admin' }); // false
@@ -70,7 +71,7 @@ const candidate = {
   },
 };
 
-isAdmin(candidate); // true — 'role' is read only after hasKey('name') passes
+isAdmin(candidate); // true — 'role' is read only after hasKeys('name', 'role') passes
 reads; // 1`;
 
 const sampleRefineKey = `import { isString, refineKey } from 'is-kit';
