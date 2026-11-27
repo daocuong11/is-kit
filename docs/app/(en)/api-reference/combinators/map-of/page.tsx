@@ -24,7 +24,7 @@ const countingValue = (value: unknown): value is number => {
 
 const isScores = mapOf(countingKey, countingValue);
 isScores(
-  new Map([
+  new Map<string | number, number>([
     ['math', 98],
     [42, 91], // key fails — its value guard is skipped
     ['english', 91], // never evaluated: checking stopped at the first failure
