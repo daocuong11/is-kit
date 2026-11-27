@@ -72,7 +72,7 @@ validCircle(shapeCircleValid); // true
 validCircle(shapeCircleNegativeRadius); // false (radius not positive)
 validCircle(shapeRect); // false (not a circle)`;
 
-const sampleOr = `import { or, isString, isNumber } from 'is-kit';
+const sampleOr = `import { or, define, isString, isNumber } from 'is-kit';
 
 // Predicates are evaluated in the order supplied, and evaluation stops
 // after the first predicate that passes — later predicates are never run.
@@ -85,9 +85,9 @@ isId(true); // false — isString and isNumber both run
 
 // An error thrown by an invoked predicate propagates unchanged, and
 // later predicates are not evaluated.
-const throwing = () => {
+const throwing = define<unknown>(() => {
   throw new Error('guard failed');
-};
+});
 or(throwing, isString)('value'); // throws Error('guard failed')
 
 // or() with no predicates rejects every value.
